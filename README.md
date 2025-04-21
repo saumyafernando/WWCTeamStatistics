@@ -1,6 +1,63 @@
-# FIFA WWC Team Statistics – Java Project
+# 🏆 FIFA WWC Team Statistics – Java Project
 
-This project is designed to manage and analyze FIFA Women's World Cup team data using Java. It includes two main applications: one for data entry and another for data analysis.
+A Java application to manage and analyze FIFA Women's World Cup (WWC) team statistics. Built as a two-part system, the project includes a data entry module to collect team data and a data analysis module that provides statistical insights.
+
+---
+
+## 📌 Project Overview
+
+This software simulates a real-world WWC statistics management system. It is designed for educational purposes and demonstrates principles of input validation, file I/O, class design, and data analysis.
+
+The project consists of two main programs:
+
+- **Data Entry Program** – collect and validate team information, then store it in a CSV file.
+- **Data Analysis Program** – read the CSV file, create `Team` objects, sort them, and display performance statistics.
+
+###🧠 Key Concepts
+
+- Object-Oriented Programming (encapsulation, classes)
+- Manual array resizing (no ArrayLists used)
+- File I/O using PrintWriter and BufferedReader
+- Selection Sort implementation
+- Input validation with regular expressions
+- Modular design with single-responsibility classes
+
+
+---
+
+## ⚙️ Features
+
+### 🔹 Data Entry Program
+
+- Collects the following information from the user:
+  - Team Name (e.g., *Matildas*)
+  - Team Code (3-letter, e.g., *AUS*)
+  - Goals Scored by the Team
+  - Goals Scored Against the Team
+  - Group (A, B, C, or D)
+- Validates all inputs:
+  - Names must not be empty or contain numbers
+  - Codes must be 3 capital letters
+  - Scores must be non-negative integers
+  - Group must be A, B, C, or D
+- Prevents duplicate team names and codes
+- Displays the entered data
+- Exports all data into a user-named `.csv` file
+
+### 🔹 Data Analysis Program
+
+- Imports data from the CSV file
+- Creates and stores `Team` objects in an array
+- Calculates:
+  - **Net Goals** = Goals For − Goals Against
+- Allows two types of analysis:
+  1. **Overall Analysis** – on all teams
+  2. **Group Analysis** – filtered by Group A–D
+- Sorting Options:
+  - Teams by Net Goals (descending)
+  - Teams by Goals Against (descending)
+  - Teams by Goals Scored (descending)
+- Displays the best-performing team(s) with the highest net goals
 
 ---
 
@@ -46,6 +103,39 @@ WWCTeamStatistics/
 ```
 
 ---
+
+
+---
+
+## 💡 Example CSV Format
+
+```csv
+Team Name,Team Code,Goals For,Goals Against,Group
+Matildas,AUS,5,1,A
+England,ENG,3,0,B
+Japan,JPN,4,2,C
+```
+
+
+---
+## 🚀 How to Run
+
+**Compile all Java files:**
+```bash
+javac Objects/Team.java Managers/*.java DataEntryApp.java DataAnalysisApp.java
+```
+
+**Run the data entry program:**
+```bash
+java DataEntryApp
+```
+**Run the data analysis program:**
+```bash
+java DataAnalysisApp
+```
+___
+
+
 
 ## 🎓 Reference
 
