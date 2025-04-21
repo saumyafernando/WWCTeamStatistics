@@ -1,0 +1,44 @@
+The DataEntryApp and DataAnalysisApp are the main applications, and they utilize various classes from the Objects and Managers packages to handle data entry, analysis, and file I/O. Team.java is a common component used for both data entry and analysis.
+
+WWCTeamStatistics (Source Folder)
+|
+├── DataEntryApp.java
+|   - This class is part of the WWCTeamStatistics program and is responsible for managing user interactions for entering FIFA Women's World Cup team data.
+|   - Uses Team.java from the Objects package.
+|   - Utilizes UserManager.java and CSVWriter.java from the Managers package.
+|
+├── DataAnalysisApp.java
+|   - This class is part of the WWCTeamStatistics program and is responsible for analyzing FIFA Women's World Cup team data.
+|   - Uses Team.java from the Objects package.
+|   - Utilizes Analyzer.java and CSVReader.java from the Managers package.
+|
+└── Objects (Package)
+|   └── Team.java
+|       - This class defines the structure of a FIFA Women's World Cup team, including attributes like team name, team code, goals for, goals against, group and net goals.
+|       - Used by both DataEntryApp and DataAnalysisApp.
+|
+└── Managers (Package)
+|   ├── Analyzer.java
+|   |   - This class provides methods to perform overall and group analysis of FIFA Women's World Cup teams.
+|   |   - Used by DataAnalysisApp to analyze team data.
+|   |
+|   ├── CSVReader.java
+|   |   - This class is responsible for reading team data from a CSV file and converting it into an array of Team objects.
+|   |   - Used by DataAnalysisApp to read team data from a CSV file.
+|   |
+|   ├── UserManager.java
+|   |   - This class is part of the DataEntryApp and is responsible for managing teams entered by the user.
+|   |   - Used by DataEntryApp to manage user interactions and entered team data.
+|   |
+|   └── CSVWriter.java
+|       - This class is part of the DataEntryApp and is responsible for writing team data to a CSV file.
+|       - Used by DataEntryApp to write team data to a CSV file.
+
+
+REFERENCE 
+
+I declare that I referred to FreeCodeCamp as a learning resource to understand and implement the regular expressions in my code for exception handling.
+
+Ferdous, T. (2023, August 1). A Practical Guide to Regular Expressions – Learn RegEx with Real Life Examples. freeCodeCamp.Org. https://www.freecodecamp.org/news/practical-regex-guide-with-real-life-examples/
+
+
