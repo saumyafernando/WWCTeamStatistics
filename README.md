@@ -13,6 +13,8 @@ The project consists of two main programs:
 - **Data Entry Program** – collect and validate team information, then store it in a CSV file.
 - **Data Analysis Program** – read the CSV file, create `Team` objects, sort them, and display performance statistics.
 
+---
+
 ###🧠 Key Concepts
 
 - Object-Oriented Programming (encapsulation, classes)
